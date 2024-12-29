@@ -34,3 +34,10 @@ app.use("/api/task", taskRoutes);
 app.listen(process.env.PORT||5000, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
 });
+
+app.get("/",(req,res)=>{
+    return res.json({
+        success:true,
+        message:"Task Management Server is now Working"
+    })
+})
