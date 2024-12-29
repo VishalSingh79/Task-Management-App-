@@ -6,7 +6,7 @@ const cookieParser=require("cookie-parser");
 require("dotenv").config();
 
 //All Routes
-const userRoutes = require("./routes/User");
+const userRoutes = require("./routes/authUser");
 const taskRoutes = require("./routes/taskRoutes");
 
 //Middlewares
