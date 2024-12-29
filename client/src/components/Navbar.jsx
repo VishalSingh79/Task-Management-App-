@@ -15,12 +15,12 @@ function Navbar() {
   return (
       <div className="navbar">
         <div className="navbar-left">
-          <h2>Task Management App</h2>
+          <h2 className='h2-header'>Task Management App</h2>
         </div>
         <div className="navbar-center">
           {token && (
             <ul>
-              <li>Dashboard</li>
+              <li><NavLink to="/dashboard">Dashboard</NavLink></li>
               <li><NavLink to="/tasklist">Tasks List</NavLink></li>
             </ul>
           )}

@@ -5,12 +5,11 @@ import Navbar from './components/Navbar'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import TaskList from './pages/TaskList'
-import AddTasks from './components/AddTasks'
-import UpdateTask from './components/UpdateTask'
+
 import VerifyEmail from './pages/VerifyEmail'
 import { useSelector } from 'react-redux'
 import PageNotFound from './pages/PageNotFound'
-
+import Dashboard from './pages/Dashboard'
 
 function App() {
   const {token} = useSelector((state)=>state.auth);
@@ -22,7 +21,7 @@ function App() {
      
           <Routes>
             {
-              token && (<Route path='/' element={<TaskList/>}/>)
+              token && (<Route path='/' element={<Dashboard/>}/>)
             }
             {
               !token && (<Route path='/' element={<Login/>}/>)
@@ -31,7 +30,7 @@ function App() {
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/verify-email' element={<VerifyEmail/>}/>
             <Route path='/tasklist' element={<TaskList/>}/>
-
+            <Route path='/dashboard' element={<Dashboard/>}/>
             <Route path='*' element={<PageNotFound/>}/>
           </Routes>
       
